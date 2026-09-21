@@ -31,4 +31,4 @@ sepia and hue-rotate clip a bright galaxy core to yellow.
 ## Claims
 
 Every number on the page is a measurement recorded in the alan-astro issue register or given by the owner
-(0.7″ RMS, consistently under 1″). Check before adding one. The Linux server is labelled beta because AR-5 is open.
+(0.7″ RMS, consistently under 1″). Check before adding one. The Linux download stays "Coming soon" until a build is published.
