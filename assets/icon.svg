@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!--
+    Two A's at equal weight, sharing the space.
+
+    Alan is Al and An. Neither initial is a decoration of the other, so neither
+    stroke is lighter than the other. The shape they make together is a mount
+    head on a tripod.
+  -->
+  <rect width="100" height="100" rx="22" fill="#0f0f10"/>
+  <g fill="none" stroke="#f4f4f5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 82 L36 24 L58 82"/>
+    <path d="M42 82 L64 24 L86 82"/>
+    <path d="M25 62 L47 62"/>
+    <path d="M53 62 L75 62"/>
+  </g>
+</svg>

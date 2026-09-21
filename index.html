@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Alan Astro</title>
+  <meta name="description" content="Astrophotography control for a Windows machine at the telescope, driven from a browser, a phone or a tablet. Focus, guide, plate solve, polar align and run the night." />
+  <meta name="theme-color" content="#0b0b0c" />
+  <meta property="og:title" content="Alan Astro" />
+  <meta property="og:description" content="Astrophotography control that tells you when it has failed, rather than reporting a number it cannot stand behind." />
+  <meta property="og:image" content="assets/sky.jpg" />
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Applied before first paint, so a visitor who chose night mode at the
+    // telescope is never flashed with the day palette on the next page load.
+    try { if (localStorage.getItem('theme') === 'night') document.documentElement.dataset.theme = 'night' } catch (e) {}
+  </script>
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Alan Astro home">
+      <svg viewBox="0 0 100 100" class="mark" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 82 L36 24 L58 82"/><path d="M42 82 L64 24 L86 82"/><path d="M25 62 L47 62"/><path d="M53 62 L75 62"/>
+        </g>
+      </svg>
+      <span>Alan Astro</span>
+    </a>
+    <nav class="links">
+      <a href="#features">Features</a>
+      <a href="#hardware">Hardware</a>
+      <a href="#download" class="btn btn-sm">Download</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle night mode" title="Night mode">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <p class="eyebrow"><span class="dot"></span>Built on real nights</p>
+      <h1>Run the whole night<br />from one screen.</h1>
+      <p class="lede">
+        Cool the camera, polar align, focus, plate solve, guide, and work through a plan of exposures,
+        all from a Windows machine at the telescope. Drive it from a browser, a phone or a tablet on the same network.
+      </p>
+      <div class="cta">
+        <a class="btn" href="#download">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3zM11.5 4.3 21 3v8.5h-9.5zM3 12.5h7.5v7.1L3 18.5zM11.5 12.5H21V21l-9.5-1.3z"/></svg>
+          Download for Windows
+        </a>
+        <a class="btn btn-ghost" href="#apps">Get the mobile apps</a>
+      </div>
+
+      <figure class="shot hero-shot">
+        <div class="chrome"><i></i><i></i><i></i><span>Sky: visible tonight</span></div>
+        <img src="assets/sky.jpg" width="1600" height="1086" alt="The sky atlas, showing Messier objects that rise tonight with their altitude curves and transit times" />
+      </figure>
+    </section>
+
+    <section class="stats wrap" aria-label="At a glance">
+      <div><b>0.93–1.03″</b><span>guiding RMS, proven under real stars</span></div>
+      <div><b>12,520</b><span>objects in the sky atlas</span></div>
+      <div><b>Every device</b><span>has a simulator for testing at a desk</span></div>
+      <div><b>1 port</b><span>serves the whole app on <code>5544</code></span></div>
+    </section>
+
+    <section id="features" class="wrap section">
+      <h2>Everything a night asks of it.</h2>
+      <p class="sub">Every routine shows its working, so you can judge a result instead of just trusting it.</p>
+
+      <div class="grid">
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.3 3.3 8.5 13.2M20.7 9.5H9.2M18 19.5l-5.8-9.9M9.7 20.7l5.8-9.9M3.3 14.5h11.5M6 4.5l5.8 9.9"/></svg></div>
+          <h3>Camera</h3>
+          <p>Exposure, gain, offset, binning and sub-frames. Cooling ramps down gradually instead of shocking the sensor. Live view and live stacking, with colour sensors debayered and stretched so a frame can be judged, not just displayed.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 20c3-14 15-14 18 0"/><path d="M12 4v4M12 20v-2"/></svg></div>
+          <h3>Autofocus</h3>
+          <p>A coarse search to bracket focus, then a fine pass, with a hyperbola fitted through the samples. It measures and compensates for backlash. When a run fails, it says so rather than reporting a number it cannot stand behind.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 2v5M12 17v5M2 12h5M17 12h5"/></svg></div>
+          <h3>Guiding</h3>
+          <p>A built-in guider, calibrated and proven at around 1″ RMS, with PHD2 supported as an alternative. Dithering between subs, and a trace with a labelled axis so you can read the size of an error at a glance.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m3 15 5-5 4 4 3-3 6 6"/></svg></div>
+          <h3>Plate solving</h3>
+          <p>ASTAP runs locally for pointing, for centring on a target to a tolerance, and for annotating a frame with what is in it. It also reports the focal length it measured, so you can tell whether the reducer was fitted.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 21h14"/><path d="M12 3 5 14M12 3l7 11"/></svg></div>
+          <h3>Polar alignment</h3>
+          <p>A three-point rotation routine that shows the correction on the knobs you actually turn: altitude and azimuth, with a direction and a size.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12"/><path d="m3 6 1.5 1.5L7 5M3 12l1.5 1.5L7 11M3 18l1.5 1.5L7 17"/></svg></div>
+          <h3>Planning</h3>
+          <p>A sequence engine with startup and shutdown actions, meridian flips, and refocus triggered by time, temperature or HFR drift. A flat wizard for the end of the night.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section split">
+      <div class="copy">
+        <p class="eyebrow">Sky atlas</p>
+        <h2>Only what rises tonight.</h2>
+        <p>
+          The atlas combines OpenNGC with a curated Messier and Caldwell set, and filters it by what actually
+          clears your horizon from your site tonight. Each target shows its altitude curve, transit time and
+          distance from the Moon before you commit to a slew.
+        </p>
+      </div>
+      <figure class="shot"><img src="assets/sky.jpg" loading="lazy" width="1600" height="1086" alt="Sky atlas cards with altitude curves" /></figure>
+    </section>
+
+    <section class="wrap section split reverse">
+      <div class="copy">
+        <p class="eyebrow">Focus</p>
+        <h2>Backlash is measured before it is trusted.</h2>
+        <p>
+          The focuser won't sweep until its slack has been measured, and every move finishes in the same
+          direction so the play is taken up the same way each time. A wrong backlash figure doesn't show in the
+          curve, only as soft stars, so it is measured instead of guessed.
+        </p>
+      </div>
+      <figure class="shot"><img src="assets/focus.jpg" loading="lazy" width="1600" height="606" alt="The focuser panel with position, backlash and step size" /></figure>
+    </section>
+
+    <section class="wrap section split">
+      <div class="copy">
+        <p class="eyebrow">Night mode</p>
+        <h2>Red, all the way down.</h2>
+        <p>
+          One switch turns the whole interface deep red: text, charts, highlights and images. Green and blue are
+          held under half at every step, because rod sensitivity falls off past about 620&nbsp;nm. That is what
+          protects your dark adaptation, not just a red tint.
+        </p>
+        <button class="btn btn-ghost theme-toggle-inline" type="button">Try it on this page</button>
+      </div>
+      <figure class="shot"><img src="assets/guide.jpg" loading="lazy" width="1600" height="1086" alt="The guiding screen with its labelled RA and DEC trace" /></figure>
+    </section>
+
+    <section id="hardware" class="wrap section">
+      <h2>Works with the gear you have.</h2>
+      <p class="sub">Supports anything with an ASCOM driver, anything that speaks Alpaca over the network, and ZWO cameras through their native SDK.</p>
+      <ul class="chips">
+        <li>Cameras</li><li>Mounts</li><li>Focusers</li><li>Filter wheels</li><li>Rotators</li>
+        <li>Flat panels</li><li>Switches</li><li>Weather stations</li><li>Safety monitors</li>
+      </ul>
+      <p class="note">
+        Every device kind has a simulator, including a focuser with real mechanical backlash you can set to a
+        specific value. That lets you reproduce a bad night at a desk.
+      </p>
+    </section>
+
+    <section id="download" class="wrap section">
+      <h2>Download</h2>
+      <p class="sub">Install the server on the Windows machine at the mount, then connect from anything on the same network.</p>
+
+      <div class="dl">
+        <article class="card dl-main">
+          <div class="dl-head">
+            <svg viewBox="0 0 24 24" class="os"><path d="M3 5.5 10.5 4.4v7.1H3zM11.5 4.3 21 3v8.5h-9.5zM3 12.5h7.5v7.1L3 18.5zM11.5 12.5H21V21l-9.5-1.3z"/></svg>
+            <div>
+              <h3>Windows</h3>
+              <p class="meta">MSI installer · 64-bit · about 48&nbsp;MB</p>
+            </div>
+          </div>
+          <p>Installs a Windows service that starts at boot and serves the app on port <code>5544</code>. Open the address it prints from any browser on your network.</p>
+          <a class="btn btn-block" href="https://github.com/miah-al/alan-astro-web/releases/latest/download/alan-astro.msi">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>
+            Download alan-astro.msi
+          </a>
+        </article>
+
+        <div id="apps" class="stores">
+          <article class="card store">
+            <svg viewBox="0 0 24 24" class="os"><path d="M4 3.5v17l9.5-8.5zM14.8 13.2l2.6 2.4-11 6.3zM14.8 10.8 6.4 2.1l11 6.3zM18.6 9.2 21 10.6c.9.6.9 2.2 0 2.8l-2.4 1.4-2.8-2.8z"/></svg>
+            <div class="store-body">
+              <h3>Android</h3>
+              <p class="meta">Native app, in Kotlin</p>
+            </div>
+            <a class="badge" href="https://play.google.com/store/apps/details?id=com.alanastro.app">
+              <small>Get it on</small><b>Google Play</b>
+            </a>
+          </article>
+          <article class="card store">
+            <svg viewBox="0 0 24 24" class="os"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.8-2-1.6-.2-3.1.9-3.9.9s-2-.9-3.4-.9C5.8 6.8 4 7.9 3 9.6c-2 3.5-.5 8.6 1.4 11.4 1 1.4 2.1 2.9 3.6 2.9 1.4-.1 2-.9 3.7-.9s2.2.9 3.7.9 2.5-1.4 3.4-2.8c1.1-1.6 1.5-3.1 1.5-3.2 0 0-3-1.1-3-4.3zM13.8 4.9c.8-.9 1.3-2.2 1.2-3.4-1.1 0-2.5.7-3.3 1.7-.7.8-1.3 2.1-1.2 3.3 1.3.1 2.5-.6 3.3-1.6z"/></svg>
+            <div class="store-body">
+              <h3>iPhone &amp; iPad</h3>
+              <p class="meta">Native app, in Swift</p>
+            </div>
+            <a class="badge soon" aria-disabled="true" title="The iOS app is not on the App Store yet">
+              <small>Coming soon to the</small><b>App Store</b>
+            </a>
+          </article>
+          <p class="fine">
+            No app needed: any browser on the same network works, and the Windows server also serves the Android
+            package directly at <code>/AlanAstro.apk</code>.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <div class="brand small">
+      <svg viewBox="0 0 100 100" class="mark" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 82 L36 24 L58 82"/><path d="M42 82 L64 24 L86 82"/><path d="M25 62 L47 62"/><path d="M53 62 L75 62"/></g></svg>
+      <span>Alan Astro</span>
+    </div>
+    <p>Astrophotography control, built for real equipment on real nights.</p>
+    <p class="copy-note">© <span id="yr">2026</span> Alomgir Miah</p>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement
+      function toggle() {
+        var night = root.dataset.theme !== 'night'
+        if (night) root.dataset.theme = 'night'; else delete root.dataset.theme
+        try { localStorage.setItem('theme', night ? 'night' : 'day') } catch (e) {}
+      }
+      document.querySelectorAll('.theme-toggle, .theme-toggle-inline').forEach(function (b) { b.addEventListener('click', toggle) })
+      document.getElementById('yr').textContent = new Date().getFullYear()
+    })()
+  </script>
+</body>
+</html>
