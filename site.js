@@ -52,10 +52,10 @@
 
   // ── Tour tabs, auto-advancing until someone picks one ─────────────────
   var captions = [
-    '<b>Sky.</b> Frame the target with your camera’s real field of view drawn over it, then slew and centre with one tap. Works offline.',
+    '<b>Frame.</b> Search a target and see your camera’s real field of view over it, with every object nearby labelled. Then slew and centre with one tap. Works offline.',
+    '<b>Atlas.</b> Over 12,500 objects, filtered to what clears your horizon tonight, each with its altitude curve, transit time and distance from the Moon.',
     '<b>Plan.</b> Targets, startup and shutdown actions, meridian flips and refocus triggers, with the whole night’s time estimated.',
-    '<b>Guide.</b> Several guide stars, a star profile, and a trace with labelled axes, so you can read the size of an error at a glance.',
-    '<b>Imaging.</b> The live frame, stretched so it can be judged, with a histogram, exposure controls and the next meridian flip counting down.'
+    '<b>Guide.</b> Several guide stars, a star profile, and a trace with labelled axes, so you can read the size of an error at a glance.'
   ]
   var tabs = [].slice.call(document.querySelectorAll('.tab'))
   var slides = [].slice.call(document.querySelectorAll('.stage img'))
