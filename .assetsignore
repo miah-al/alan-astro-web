@@ -1,0 +1,10 @@
+# Files in this folder that are not part of the website.
+.git
+.gitignore
+.assetsignore
+.nojekyll
+.wrangler
+node_modules
+tools
+wrangler.jsonc
+README.md

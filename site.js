@@ -2,15 +2,14 @@
   var root = document.documentElement
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-  // ── Night mode ────────────────────────────────────────────────────────
+  // ── Night mode (the "Turn this page red" button) ──────────────────────
   function toggleTheme() {
     var night = root.dataset.theme !== 'night'
     if (night) root.dataset.theme = 'night'; else delete root.dataset.theme
     try { localStorage.setItem('theme', night ? 'night' : 'day') } catch (e) {}
     starColour = readStar()
   }
-  document.querySelectorAll('.theme-toggle, .theme-toggle-inline').forEach(function (b) { b.addEventListener('click', toggleTheme) })
-  document.getElementById('yr').textContent = new Date().getFullYear()
+  document.querySelectorAll('.theme-toggle-inline').forEach(function (b) { b.addEventListener('click', toggleTheme) })
 
   // ── Nav solidifies once the hero has scrolled away ────────────────────
   var nav = document.getElementById('nav')
@@ -52,10 +51,10 @@
 
   // ── Tour tabs, auto-advancing until someone picks one ─────────────────
   var captions = [
-    '<b>Frame.</b> Search a target and see your camera’s real field of view over it, with every object nearby labelled. Then slew and centre with one tap. Works offline.',
-    '<b>Atlas.</b> Over 12,500 objects, filtered to what clears your horizon tonight, each with its altitude curve, transit time and distance from the Moon.',
-    '<b>Plan.</b> Targets, startup and shutdown actions, meridian flips and refocus triggers, with the whole night’s time estimated.',
-    '<b>Guide.</b> Several guide stars, a star profile, and a trace with labelled axes, so you can read the size of an error at a glance.'
+    '<b>Atlas.</b> Over 18,900 objects, sorted by what gets high enough in darkness tonight. Each shows its altitude curve, when it’s highest and how far it is from the Moon.',
+    '<b>Frame.</b> Pick a target and see your camera’s field of view on the sky, with the objects around it labelled. Then slew and centre with one tap.',
+    '<b>Plan.</b> Your targets in order, what to do at the start and end of the night, and how long it will all take.',
+    '<b>Guide.</b> The guide stars, a close-up of the main one, and the error drawn in arcseconds, so you can read how well it’s guiding at a glance.'
   ]
   var tabs = [].slice.call(document.querySelectorAll('.tab'))
   var slides = [].slice.call(document.querySelectorAll('.stage img'))

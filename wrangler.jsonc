@@ -1,0 +1,14 @@
+// Publishes the site to alanastro.com as a Cloudflare Worker that only serves
+// these static files. From this folder: npx wrangler deploy
+// What is left out of the upload is listed in .assetsignore.
+{
+  "name": "alanastro",
+  "compatibility_date": "2026-11-01",
+  "assets": { "directory": "." },
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    { "pattern": "alanastro.com", "custom_domain": true },
+    { "pattern": "www.alanastro.com", "custom_domain": true }
+  ]
+}

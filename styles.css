@@ -95,13 +95,10 @@ h1, h2, h3 { color: rgb(var(--fg-50)); margin: 0; letter-spacing: -0.025em; text
 .links { display: flex; align-items: center; gap: 26px; font-size: 14px; }
 .links > a:not(.btn) { color: rgb(var(--fg-300)); transition: color .2s; }
 .links > a:not(.btn):hover { color: rgb(var(--fg-50)); }
-.theme-toggle {
-  width: 38px; height: 38px; display: grid; place-items: center;
-  border-radius: 11px; border: 1px solid rgb(var(--fg-50) / .14); background: rgb(var(--base-850) / .6);
-  color: rgb(var(--fg-200)); cursor: pointer; transition: all .2s;
-}
-.theme-toggle svg { width: 17px; height: 17px; fill: currentColor; }
-.theme-toggle:hover { color: rgb(var(--fg-50)); border-color: rgb(var(--fg-50) / .3); }
+.links .btn-sm svg { width: 17px; height: 17px; }
+/* A link inside running text: the email address. */
+a.inline { color: rgb(var(--fg-100)); text-decoration: underline; text-decoration-color: rgb(var(--fg-500)); text-underline-offset: 3px; overflow-wrap: anywhere; }
+a.inline:hover { color: rgb(var(--fg-50)); text-decoration-color: rgb(var(--fg-200)); }
 
 /* ── Buttons ──────────────────────────────────────────────────────────── */
 .btn {
@@ -166,6 +163,7 @@ h1 { font-size: clamp(44px, 8.2vw, 104px); line-height: .96; font-weight: 750; l
 .platforms { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; margin-top: 34px; font-size: 13px; color: rgb(var(--fg-400)); }
 .platforms span { display: inline-flex; align-items: center; gap: 7px; }
 .platforms svg { width: 15px; height: 15px; fill: currentColor; }
+.credit { margin: 26px 0 0; max-width: 560px; font: 500 12px/1.5 var(--mono); color: rgb(var(--fg-500)); letter-spacing: .01em; }
 
 /* The device cluster: a laptop, a tablet and a landscape phone, the way the
    app is actually used — one server at the mount, any screen in hand. */
@@ -317,9 +315,11 @@ h1 { font-size: clamp(44px, 8.2vw, 104px); line-height: .96; font-weight: 750; l
 .card.media { padding: 0; display: grid; grid-template-rows: auto 1fr; }
 .card.media .body { padding: 26px 28px 28px; }
 .card.media img { width: 100%; aspect-ratio: 16 / 8; object-fit: cover; object-position: top left; border-bottom: 1px solid rgb(var(--base-750)); }
+/* A screenshot whose bottom matters (the autofocus result line) is shown whole. */
+.card.media img.full { aspect-ratio: auto; }
 
 /* ── Compare (day / night) ────────────────────────────────────────────── */
-.compare { --pos: 50%; position: relative; margin-top: 56px; aspect-ratio: 1400 / 973; border-radius: 20px; overflow: hidden; border: 1px solid rgb(var(--base-700)); cursor: ew-resize; user-select: none; touch-action: pan-y; box-shadow: 0 50px 100px -40px #000; }
+.compare { --pos: 50%; position: relative; margin-top: 56px; aspect-ratio: 16 / 10; border-radius: 20px; overflow: hidden; border: 1px solid rgb(var(--base-700)); cursor: ew-resize; user-select: none; touch-action: pan-y; box-shadow: 0 50px 100px -40px #000; }
 .compare img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
 .compare .night-img { clip-path: inset(0 0 0 var(--pos)); }
 .compare .handle { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; margin-left: -1px; background: #fff; box-shadow: 0 0 20px rgb(255 80 50 / .8); }
@@ -341,7 +341,7 @@ h1 { font-size: clamp(44px, 8.2vw, 104px); line-height: .96; font-weight: 750; l
 
 /* ── Download ─────────────────────────────────────────────────────────── */
 .download { position: relative; margin-top: 160px; padding: 96px 0 104px; overflow: hidden; isolation: isolate; border-block: 1px solid rgb(var(--base-750)); }
-.download::before { content: ''; position: absolute; inset: 0; z-index: -2; background: url('assets/hero-m31.jpg') center 40% / cover; opacity: .22; filter: var(--img-filter) blur(2px); }
+.download::before { content: ''; position: absolute; inset: 0; z-index: -2; background: url('assets/hero.jpg') center 45% / cover; opacity: .22; filter: var(--img-filter) blur(2px); }
 .download::after { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse 60% 70% at 50% 0%, transparent, rgb(var(--base-950)) 80%), linear-gradient(rgb(var(--base-950) / .3), rgb(var(--base-950))); }
 .dl { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; margin-top: 56px; align-items: stretch; }
 .dl-main { display: flex; flex-direction: column; gap: 20px; padding: 32px; background: rgb(var(--base-900) / .85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
@@ -364,6 +364,10 @@ h1 { font-size: clamp(44px, 8.2vw, 104px); line-height: .96; font-weight: 750; l
 .badge b { font-size: 18px; font-weight: 600; line-height: 1.15; letter-spacing: -0.01em; }
 a.badge[href]:hover { border-color: rgb(var(--fg-200)); transform: translateY(-2px); }
 .badge.soon { opacity: .55; cursor: default; border-style: dashed; }
+/* The Windows card's button until there is a build to download. */
+.btn.soon { background: transparent; color: rgb(var(--fg-300)); border: 1px dashed rgb(var(--fg-500)); box-shadow: none; cursor: default; }
+.btn.soon::after { display: none; }
+.btn.soon:hover { transform: none; box-shadow: none; }
 .fine { margin: 4px 4px 0; font-size: 13.5px; color: rgb(var(--fg-500)); }
 
 /* ── Footer ───────────────────────────────────────────────────────────── */
