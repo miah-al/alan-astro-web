@@ -115,7 +115,7 @@
   <!-- ── AI-assisted ──────────────────────────────────────────────────────
        Every message below is quoted word for word from the alan-astro field
        session (498b3986), lines noted in README.md. "…" marks a cut, and
-       [brackets] replace equipment brand names. Times are local. -->
+       [brackets] replace equipment brand names and fix one typo. Times are local. -->
   <section id="ai" class="wrap section">
     <p class="kicker kicker-lg reveal">AI-assisted astronomy</p>
     <h2 class="h2 reveal">Tell it what to shoot. <em>The AI runs the night.</em></h2>
@@ -127,7 +127,7 @@
 
     <ol class="ai-steps">
       <li class="reveal"><span>1</span><div><b>Install the server</b><p>Put Alan Astro on the computer at your telescope: a Windows PC, a Linux mini PC or a Raspberry Pi 4 or 5. That's your astro server.</p></div></li>
-      <li class="reveal" style="--d:.08s"><span>2</span><div><b>Tell the AI its name</b><p>Give the AI your astro server's name, like <code>astro-pc</code>. The server describes its own API, so the AI learns what it can do from the server itself. <em class="soon-note">Coming with the release.</em></p></div></li>
+      <li class="reveal" style="--d:.08s"><span>2</span><div><b>Tell the AI its name</b><p>Give the AI your astro server's name, like <code>astro-pc</code>. At <code>astro-pc:5544/api</code> the server describes its whole API, with a step-by-step guide to running a night, so the AI learns it from the server itself. <em class="soon-note">Coming with the release.</em></p></div></li>
       <li class="reveal" style="--d:.16s"><span>3</span><div><b>Say what to shoot</b><p>A target and the sky you can see. The AI runs the night and tells you how it went.</p></div></li>
     </ol>
 
@@ -147,7 +147,7 @@
       </aside>
 
       <ol class="chat reveal" aria-label="Messages from the night of 8 October">
-        <li class="msg you"><time>7:44 pm</time>take over. … got it?</li>
+        <li class="msg you"><time>7:44 pm</time>take over. take me to [the knob stage]. … got it?</li>
         <li class="msg ai"><time>7:46 pm</time>In position: HA +0.50 h, Dec +40°, 84° up, tracking. …</li>
         <li class="msg ai"><time>8:04 pm</time>Stephan's Quintet (HCG 92) is at 61.7° altitude, due east, and crosses the meridian in 2.3 hours. Slewing and centring: …</li>
         <li class="msg ai"><time>8:39 pm</time>Centred at 0.36′ (4 attempts). Starting guiding with a fresh calibration, … Focus holds: HFR 3.86 on a 10 s frame, better than autofocus's 4.33.</li>
@@ -172,7 +172,7 @@
           <li class="msg you"><time>9:32 pm</time>I am going outside now</li>
           <li class="msg ai"><time>9:32 pm</time>Ready. The polar measurement is waiting at the knob stage, last read at 16.45′ of azimuth. At the mount: 1. Mark the azimuth knob's position. 2. Turn it exactly <b>one full revolution west</b>, the way the screen's azimuth arrow points. 3. Say "done". …</li>
           <li class="msg you"><time>9:33 pm</time>Done</li>
-          <li class="msg ai"><time>9:35 pm</time>Run B reads <b>azimuth −7.55′</b>, against 17.18′ before the turn. So one revolution truly moved the azimuth <b>24.7′</b> on the sky, and the refresh reported <b>26.6′</b>. … Your knob scale is about <b>32.5′ at the bolts per revolution</b>. One more turn and you can go inside: about <b>a third of a revolution east, roughly 110°</b>, then say "done". …</li>
+          <li class="msg ai"><time>9:35 pm</time>Run B reads <b>azimuth −7.55′</b>, against 17.18′ before the turn. So one revolution truly moved the azimuth <b>24.7′</b> on the sky, and the refresh reported <b>26.6′</b>. … One more turn and you can go inside: about <b>a third of a revolution east, roughly 110°</b>, then say "done". …</li>
           <li class="msg you"><time>9:35 pm</time>What?</li>
           <li class="msg ai"><time>9:36 pm</time>Sorry, that was too much at once. Here's the short version. The full turn you made went a little past the target. Now turn the <b>same azimuth knob back the other way (east)</b> by about <b>a third of a turn</b>. Picture the knob as a clock face: start at 12 and stop at about 4. Then say "done" and go inside. I'll do the rest from here.</li>
         </ol>
@@ -203,7 +203,7 @@
       </article>
     </div>
 
-    <p class="ai-note reveal">Quoted word for word from the session logs. "…" marks a cut, and [brackets] replace equipment brand names. The AI isn't built into the app: it pressed the same buttons the screens do, because every button in Alan Astro is a call to its own server.</p>
+    <p class="ai-note reveal">Quoted word for word from the session logs. "…" marks a cut, and [brackets] replace equipment brand names and fix one typo. The AI isn't built into the app: it pressed the same buttons the screens do, because every button in Alan Astro is a call to its own server.</p>
   </section>
 
   <!-- ── Guider ───────────────────────────────────────────────────────── -->
