@@ -483,3 +483,4 @@ a.badge[href]:hover { border-color: rgb(var(--fg-200)); transform: translateY(-2
 .ai-steps p { margin: 0; font-size: 14.5px; color: rgb(var(--fg-400)); }
 @media (max-width: 1000px) { .ai-steps { grid-template-columns: 1fr; } }
 .soon-note { font-style: normal; font: 500 11px/1 var(--mono); text-transform: uppercase; letter-spacing: .12em; color: rgb(var(--fg-500)); white-space: nowrap; }
+.platforms svg.board { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
