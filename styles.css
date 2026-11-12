@@ -450,8 +450,8 @@ a.badge[href]:hover { border-color: rgb(var(--fg-200)); transform: translateY(-2
 .msg time { display: block; margin-bottom: 4px; font: 500 11px/1 var(--mono); letter-spacing: .04em; opacity: .62; }
 .msg.you { align-self: flex-end; background: rgb(var(--accent)); color: rgb(var(--accent-ink)); border-bottom-right-radius: 6px; font-weight: 500; }
 .msg.ai { align-self: flex-start; background: rgb(var(--base-850)); border: 1px solid rgb(var(--base-700)); color: rgb(var(--fg-200)); border-bottom-left-radius: 6px; }
-.msg.ai::before { content: 'AI'; position: absolute; left: -38px; top: 10px; width: 28px; height: 28px; border-radius: 9px; display: grid; place-items: center; font: 700 10.5px/1 var(--mono); color: rgb(var(--fg-50)); background: rgb(var(--base-750)); border: 1px solid rgb(var(--base-600)); }
-.chat > .msg.ai { margin-left: 38px; }
+.msg.ai::before { content: 'AI'; position: absolute; left: -44px; top: 8px; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; font: 750 13px/1 Inter, sans-serif; letter-spacing: -0.01em; color: rgb(var(--fg-50)); background: rgb(var(--base-750)); border: 1px solid rgb(var(--base-600)); }
+.chat > .msg.ai { margin-left: 44px; }
 .msg b { color: rgb(var(--fg-50)); font-weight: 650; }
 .msg.you b { color: inherit; }
 .ai-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 56px; align-items: start; }
@@ -470,3 +470,9 @@ a.badge[href]:hover { border-color: rgb(var(--fg-200)); transform: translateY(-2
   .chat > .msg.ai { margin-left: 0; }
   .msg.ai::before { display: none; }
 }
+
+/* "AI-assisted astronomy" is how the product is sold, so the hero says it in
+   real type, with "Coming soon" as a small badge beside it. */
+.eyebrow.ai-tag { font: 650 clamp(16px, 1.6vw, 19px)/1 Inter, system-ui, sans-serif; text-transform: none; letter-spacing: -0.01em; color: rgb(var(--fg-50)); gap: 12px; padding: 10px 10px 10px 16px; }
+.ai-tag .soon { font: 500 10.5px/1 var(--mono); text-transform: uppercase; letter-spacing: .16em; color: rgb(var(--fg-400)); padding: 6px 9px; border-radius: 999px; border: 1px solid rgb(var(--fg-50) / .16); }
+.kicker.kicker-lg { font-size: 15px; letter-spacing: .14em; color: rgb(var(--fg-200)); }
