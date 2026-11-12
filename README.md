@@ -34,9 +34,8 @@ To switch one on:
 - **iOS:** the same, with `https://apps.apple.com/app/id<number>`, once the app has an App Store listing.
 - **Linux:** stays "Coming soon" until `miah-al/alan-astro-linux` publishes a build.
 - Then put the hero's main button back to a download link, and change "Coming soon." in the download section.
-- **The AI section, step 2:** take off "Coming with the release" once an installed build carries the
-  self-describing API (alan-astro SV-108, merged 2026-11-11 as `a5cddf4d`). It serves `/api` and `/openapi/v1.json`;
-  1.0.2505.0 and older do not.
+- **The AI section, step 2** names the self-describing API (alan-astro SV-108, merged 2026-11-11 as `a5cddf4d`;
+  `/api` and `/openapi/v1.json`). Builds from 1.0.2505.0 back do not have it, so check the release carries it.
 
 ## Local preview
 
@@ -52,8 +51,11 @@ Where each image comes from (2026-11-07):
 - `app-sky.jpg`, `app-guide.jpg`, `focus.jpg`: real screens from the 2026-10-26 field night
   (`docs/reference/images/2026-10-26/` in alan-astro). `focus.jpg` is cropped below the status row, which shows the site's name.
   Use real guide and focus captures: the simulator guides at an unbelievable 0.07″ and fits focus at R² 1.00.
-- The rest (`app-frame-m42.jpg`, `app-plan.jpg`, `app-plan-night.jpg`, `sky.jpg`, `app-atlas-phone.jpg`) are from
-  the simulator, taken from alan-astro master `cd447e8c` on an isolated server, never the desk rig:
+- The rest (`app-frame.jpg`, `app-plan.jpg`, `app-plan-night.jpg`, `sky.jpg`, `app-atlas-phone.jpg`) are from
+  the simulator, taken from alan-astro master `cd447e8c` on an isolated server, never the desk rig. Retaken 2026-11-12 with
+  `tools/reshoot.mjs`: the atlas searched for "Pegasus" (the app's own search hint names M31, and the page shows no
+  Andromeda), the plan folded with three Pegasus galaxies, and M42 with object labels off (they print over each other).
+  For an evening sky at that hour the example site sat at 40° N 120° W; M42 used the English example site:
 
 1. A worktree of alan-astro at `D:\tmp\site-shots`, built (`dotnet build backend\AstroControl.Api -c Debug`,
    then `npm run build` in `web`).
@@ -77,7 +79,7 @@ Real messages from field nights on the 11-inch SCT at 2,800 mm (the Stephan's Qu
 names, IPs, people or issue ids. Times are local (EDT until 1 November, EST after).
 
 Sources, all in the alan-astro session transcript `498b3986-6101-47c6-a3c4-c6bd5d30fd16.jsonl` (line numbers):
-- 8 October, Stephan's Quintet: 16355, 16409, 16543, 16728, 17277, 17282, 17688, 17691, 17923, 18401, 18434, 18915, 18918, 18937, 19061, 19076, 19109
+- 8 October, Stephan's Quintet: 16355, 16409, 16543, 16728, 17965, 17277, 17282, 17688, 17691, 17923, 18401, 18434, 18915, 18918, 18937, 19061, 19076, 19109
 - 26 October, the clock face: 59345, 59357, 59360, 59390, 59400, 59412, and 59961 for the 0.19′
 - Sky and targets, 8 October: 18555, 18570, 18637
 
@@ -87,7 +89,8 @@ To check a quote: read that line of the JSONL, parse it, and print `message.cont
 
 Every number on the page is a measurement recorded in the alan-astro issue register, given by the owner,
 or read from the running app (the atlas: 18,956 entries on 2026-11-07). Check before adding one.
-On 2026-11-07 every claim was checked against master `cd447e8c`. Things that are **not** true and must not come back:
+On 2026-11-07 every claim was checked against master `cd447e8c`. Guiding is quoted per night (0.73″ on 8 October, 0.75″ on 26 October), never "under 1″ night after night".
+The night timeline has no clock times: they were invented. Things that are **not** true and must not come back:
 
 - INDI on Windows (it is only in the unreleased Linux server).
 - "Won't autofocus until backlash is measured" (it runs without a backlash figure).

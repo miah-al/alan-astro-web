@@ -51,10 +51,10 @@
 
   // ── Tour tabs, auto-advancing until someone picks one ─────────────────
   var captions = [
-    '<b>Atlas.</b> Over 18,900 objects, sorted by what gets high enough in darkness tonight. Each shows its altitude curve, when it’s highest and how far it is from the Moon.',
-    '<b>Frame.</b> Pick a target and see your camera’s field of view on the sky, with the objects around it labelled. Then slew and centre with one tap.',
+    "<b>Atlas.</b> Search, or filter by catalogue, type, direction and whether it fits your frame. Each target shows how high it gets tonight.",
+    "<b>Frame.</b> Pick a target and see your camera's field of view drawn on the sky. Then slew and centre with one tap.",
     '<b>Plan.</b> Your targets in order, what to do at the start and end of the night, and how long it will all take.',
-    '<b>Guide.</b> The guide stars, a close-up of the main one, and the error drawn in arcseconds, so you can read how well it’s guiding at a glance.'
+    "<b>Guide.</b> The guide stars, a close-up of the main one, and the error drawn in arcseconds, so you can read how well it's guiding at a glance."
   ]
   var tabs = [].slice.call(document.querySelectorAll('.tab'))
   var slides = [].slice.call(document.querySelectorAll('.stage img'))
