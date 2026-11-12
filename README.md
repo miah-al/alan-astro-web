@@ -34,6 +34,9 @@ To switch one on:
 - **iOS:** the same, with `https://apps.apple.com/app/id<number>`, once the app has an App Store listing.
 - **Linux:** stays "Coming soon" until `miah-al/alan-astro-linux` publishes a build.
 - Then put the hero's main button back to a download link, and change "Coming soon." in the download section.
+- **The AI section, step 2:** take off "Coming with the release" once an installed build carries the
+  self-describing API (alan-astro SV-108, merged 2026-11-11 as `a5cddf4d`). It serves `/api` and `/openapi/v1.json`;
+  1.0.2505.0 and older do not.
 
 ## Local preview
 
