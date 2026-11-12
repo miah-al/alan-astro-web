@@ -476,3 +476,10 @@ a.badge[href]:hover { border-color: rgb(var(--fg-200)); transform: translateY(-2
 .eyebrow.ai-tag { font: 650 clamp(16px, 1.6vw, 19px)/1 Inter, system-ui, sans-serif; text-transform: none; letter-spacing: -0.01em; color: rgb(var(--fg-50)); gap: 12px; padding: 10px 10px 10px 16px; }
 .ai-tag .soon { font: 500 10.5px/1 var(--mono); text-transform: uppercase; letter-spacing: .16em; color: rgb(var(--fg-400)); padding: 6px 9px; border-radius: 999px; border: 1px solid rgb(var(--fg-50) / .16); }
 .kicker.kicker-lg { font-size: 15px; letter-spacing: .14em; color: rgb(var(--fg-200)); }
+.ai-steps { list-style: none; padding: 0; margin: 40px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.ai-steps li { display: flex; gap: 14px; align-items: flex-start; padding: 20px 22px; border-radius: 18px; background: rgb(var(--base-900)); border: 1px solid rgb(var(--base-750)); }
+.ai-steps span { flex: none; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; font: 750 15px/1 Inter, sans-serif; background: rgb(var(--accent)); color: rgb(var(--accent-ink)); }
+.ai-steps b { display: block; color: rgb(var(--fg-50)); font-size: 16.5px; font-weight: 650; margin-bottom: 4px; }
+.ai-steps p { margin: 0; font-size: 14.5px; color: rgb(var(--fg-400)); }
+@media (max-width: 1000px) { .ai-steps { grid-template-columns: 1fr; } }
+.soon-note { font-style: normal; font: 500 11px/1 var(--mono); text-transform: uppercase; letter-spacing: .12em; color: rgb(var(--fg-500)); white-space: nowrap; }
