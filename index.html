@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Alan Astro</title>
-  <meta name="description" content="Alan Astro runs your astrophotography night: guiding, autofocus, plate solving, polar alignment and a plan that runs until dawn. Control it from a laptop, tablet or phone. Coming soon." />
+  <meta name="description" content="AI-assisted astronomy. Alan Astro runs your astrophotography night: guiding, autofocus, plate solving, polar alignment and a plan that runs until dawn. Control it from a laptop, tablet or phone. Coming soon." />
   <meta name="theme-color" content="#09090a" />
   <link rel="canonical" href="https://alanastro.com/" />
   <meta property="og:type" content="website" />
@@ -38,6 +38,7 @@
     <span>Alan Astro</span>
   </a>
   <nav class="links">
+    <a href="#ai">AI</a>
     <a href="#guider">Guiding</a>
     <a href="#anywhere">Screens</a>
     <a href="#tour">Tour</a>
@@ -59,12 +60,12 @@
 
     <div class="wrap">
       <div class="hero-copy">
-        <p class="eyebrow pill reveal"><span class="dot"></span>Coming soon</p>
+        <p class="eyebrow pill reveal"><span class="dot"></span>AI-assisted astronomy · Coming soon</p>
         <h1 class="reveal" style="--d:.08s">Never waste<br /><span class="grad">a clear night.</span></h1>
         <p class="lede reveal" style="--d:.16s">
           Alan Astro finds your target, focuses, guides and works through your plan from dusk to dawn,
           so you can go to bed. Check in from a laptop, tablet or phone. If anything goes wrong, it
-          tells you what happened and why.
+          tells you what happened and why. On our own field nights, an AI ran all of it from a few typed words.
         </p>
         <div class="cta reveal" style="--d:.24s">
           <a class="btn" href="mailto:alan.astro.space@gmail.com?subject=Tell%20me%20when%20Alan%20Astro%20is%20out">
@@ -108,6 +109,94 @@
     <div class="stat reveal" style="--d:.08s"><b><span data-count="2800">2,800</span><small>mm</small></b><span>focal length guided at f/10, through the main scope</span></div>
     <div class="stat reveal" style="--d:.16s"><b><span data-count="18900">18,900</span><small>+</small></b><span>objects in the sky atlas, sorted by what's up tonight</span></div>
     <div class="stat reveal" style="--d:.24s"><b><span data-count="0.997" data-dec="3">0.997</span><small>R²</small></b><span>how well the best focus curve fitted, on a real night</span></div>
+  </section>
+
+  <!-- ── AI-assisted ──────────────────────────────────────────────────────
+       Every message below is quoted word for word from the alan-astro field
+       session (498b3986), lines noted in README.md. "…" marks a cut, and
+       [brackets] replace equipment brand names. Times are local. -->
+  <section id="ai" class="wrap section">
+    <p class="kicker reveal">AI-assisted astronomy</p>
+    <h2 class="h2 reveal">Tell it what to shoot. <em>The AI runs the night.</em></h2>
+    <p class="sub reveal">
+      These are real messages from field nights at a 2,800&nbsp;mm telescope in a Bortle&nbsp;8 backyard.
+      The owner typed a few words on a phone. An AI ran Alan Astro and did the rest: the profile, polar
+      alignment, focus, guiding, the plan and the flats.
+    </p>
+
+    <div class="ai-story">
+      <aside class="ai-result reveal">
+        <img src="assets/hero.jpg" loading="lazy" alt="Stephan's Quintet, the result of the night of 8 October" />
+        <div>
+          <p class="ai-date">8 October</p>
+          <h3>The night behind the picture at the top of this page</h3>
+          <ul class="ai-facts">
+            <li><b>40/40</b>frames of 3 min</li>
+            <li><b>0.73″</b>RMS guiding</li>
+            <li><b>0.22′</b>centred by plate solving</li>
+            <li><b>1</b>meridian flip, on its own</li>
+          </ul>
+        </div>
+      </aside>
+
+      <ol class="chat reveal" aria-label="Messages from the night of 8 October">
+        <li class="msg you"><time>7:44 pm</time>take over. take me to turning the bold status. … got it?</li>
+        <li class="msg ai"><time>7:44 pm</time>Got it. I'll take you to the bolt-turning step …</li>
+        <li class="msg ai"><time>8:04 pm</time>Stephan's Quintet (HCG 92) is at 61.7° altitude, due east, and crosses the meridian in 2.3 hours. Slewing and centring: …</li>
+        <li class="msg ai"><time>8:39 pm</time>Centred at 0.36′ (4 attempts). Starting guiding with a fresh calibration, … Focus holds: HFR 3.86 on a 10 s frame, better than autofocus's 4.33.</li>
+        <li class="msg ai"><time>9:02 pm</time>I sent you a crop of the quintet from the 3-minute sub. All five members show, faint because it's a single sub at f/10. … Shall I re-centre and run a set of 3-minute subs?</li>
+        <li class="msg you"><time>9:03 pm</time>Yes</li>
+        <li class="msg ai"><time>9:20 pm</time>The plan is loaded and saved: <b>40 × 180 s, about 2h05m</b>, with the target at 76° altitude and 1.06 h to the meridian. …</li>
+        <li class="msg you"><time>9:46 pm</time>Screenshot guiding plz</li>
+        <li class="msg ai"><time>9:47 pm</time>I sent you the Guide page screenshot to share. It shows <b>RMS RA 0.53″, Dec 0.50″, total 0.73″</b> over the last 100 samples, multi-star on the [camera's] built-in guide sensor at 2800 mm. For an [11-inch SCT] on [this mount], that's good.</li>
+        <li class="msg ai"><time>10:43 pm</time><b>The plan:</b> 22 of 40 frames, the flip handled on its own, and it finishes around 23:45.</li>
+        <li class="msg you"><time>10:55 pm</time>You have been taking images right?</li>
+        <li class="msg ai"><time>10:56 pm</time>Yes. <b>31 subs of Stephan's Quintet so far</b>, all 180 s at gain 100 and −10 °C: … That's 93 minutes of data already.</li>
+        <li class="msg you"><time>11:42 pm</time>Need to take flats, auto exposure</li>
+        <li class="msg ai"><time>11:43 pm</time>The quintet plan is <b>finished: 40/40 frames</b>. … <b>Flats done: 20 frames at 0.095 s, mean 32,846 ADU</b> against a target of 32,768, which is half well almost exactly. … They're saved beside the lights.</li>
+      </ol>
+    </div>
+
+    <div class="ai-cards">
+      <article class="card ai-card reveal">
+        <p class="ai-date">26 October</p>
+        <h3>Polar alignment, by the clock face</h3>
+        <ol class="chat">
+          <li class="msg you"><time>9:32 pm</time>I am going outside now</li>
+          <li class="msg ai"><time>9:32 pm</time>Ready. The polar measurement is waiting at the knob stage, last read at 16.45′ of azimuth. At the mount: 1. Mark the azimuth knob's position. 2. Turn it exactly <b>one full revolution west</b>, the way the screen's azimuth arrow points. 3. Say "done". …</li>
+          <li class="msg you"><time>9:33 pm</time>Done</li>
+          <li class="msg ai"><time>9:35 pm</time>Run B reads <b>azimuth −7.55′</b>, against 17.18′ before the turn. So one revolution truly moved the azimuth <b>24.7′</b> on the sky, and the refresh reported <b>26.6′</b>. … Your knob scale is about <b>32.5′ at the bolts per revolution</b>. One more turn and you can go inside: about <b>a third of a revolution east, roughly 110°</b>, then say "done". …</li>
+          <li class="msg you"><time>9:35 pm</time>What?</li>
+          <li class="msg ai"><time>9:36 pm</time>Sorry, that was too much at once. Here's the short version. The full turn you made went a little past the target. Now turn the <b>same azimuth knob back the other way (east)</b> by about <b>a third of a turn</b>. Picture the knob as a clock face: start at 12 and stop at about 4. Then say "done" and go inside. I'll do the rest from here.</li>
+        </ol>
+        <p class="ai-outcome"><b>0.19′</b>polar alignment by the end of the night</p>
+      </article>
+
+      <article class="card ai-card reveal" style="--d:.08s">
+        <p class="ai-date">9 November</p>
+        <h3>It made the profile itself</h3>
+        <ol class="chat">
+          <li class="msg ai"><time>7:25 pm</time>… I'll do all of that from here. I'll only need you for anything physical.</li>
+          <li class="msg you"><time>7:25 pm</time>Get me to the knob stage</li>
+          <li class="msg ai"><time>7:27 pm</time>… 1. Create a "[51 mm refractor and camera]" profile from Default, … and switch to it. Its settings: 250 mm, 51 mm aperture; [focuser] backlash 600; guiding through the main scope; … 4. Slew to a field in the south-west. 5. Start polar alignment, and stop when it's waiting at the adjust step for your knobs. I'll tell you exactly which knob to turn, which way, and how far.</li>
+        </ol>
+      </article>
+
+      <article class="card ai-card reveal" style="--d:.16s">
+        <p class="ai-date">Your sky, your targets</p>
+        <h3>You say where to look</h3>
+        <ol class="chat">
+          <li class="msg you"><time>31 Oct · 8:12 pm</time>Rig is yours, south, west and south east skies</li>
+          <li class="msg ai"><time>8:12 pm</time>Rig is mine. I'll keep to the south, west and south-east. …</li>
+          <li class="msg you"><time>8 Oct · 10:07 pm</time>I have south, can we do the hoags</li>
+          <li class="msg ai"><time>10:07 pm</time>Hoag's Object isn't up. It's at <b>2.7° altitude, setting in the west-northwest</b>, and it transits at about 3 PM tomorrow. It's a spring and summer target, best April to July in the evening.</li>
+          <li class="msg you"><time>20 Oct · 7:34 pm</time>M27 3min sub first plz …</li>
+          <li class="msg ai"><time>7:34 pm</time>M27 is a good pick for tonight. It's just past the meridian (about HA +0.8 h, roughly 70° up in the south-southwest), so <b>no meridian flip is needed</b> … It stays above your 30° floor for about the next 3½ hours.</li>
+        </ol>
+      </article>
+    </div>
+
+    <p class="ai-note reveal">Quoted word for word from the session logs. "…" marks a cut, and [brackets] replace equipment brand names. The AI isn't built into the app: it pressed the same buttons the screens do, because every button in Alan Astro is a call to its own server.</p>
   </section>
 
   <!-- ── Guider ───────────────────────────────────────────────────────── -->

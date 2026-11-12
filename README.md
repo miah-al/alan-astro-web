@@ -44,7 +44,7 @@ Open `index.html` in a browser. Nothing needs to be built.
 Where each image comes from (2026-11-07):
 
 - `hero.jpg`: the owner's own Stephan's Quintet, shot with Alan Astro on 2026-10-08 from a Bortle 8 backyard
-  (2,800 mm, 38 × 180 s, the plan's guiding 0.70″ median), processed in Alan Astro Suite. Source:
+  (2,800 mm, 38 × 180 s; the guide screen read 0.73″ RMS that night), processed in Alan Astro Suite. Source:
   `D:\Data\HCG92_Stephans_Quintet.png`, cropped so the galaxies sit right of the headline.
 - `app-sky.jpg`, `app-guide.jpg`, `focus.jpg`: real screens from the 2026-10-26 field night
   (`docs/reference/images/2026-10-26/` in alan-astro). `focus.jpg` is cropped below the status row, which shows the site's name.
@@ -66,6 +66,20 @@ The phone and tablet shots use the Android emulators' screen sizes (915×412 and
 
 Night mode on this page uses an SVG colour matrix (`#redden` in `index.html`) rather than a CSS filter chain, because
 sepia and hue-rotate clip a bright galaxy core to yellow.
+
+## The AI section (`#ai`)
+
+Real messages from field nights, where an AI ran the app and the owner only turned knobs. Rules: word for word,
+"…" marks a cut, [brackets] replace equipment brand names, imaging only (no bug-fix talk), and no site name, PC
+names, IPs, people or issue ids. Times are local (EDT until 1 November, EST after).
+
+Sources, all in the alan-astro session transcript `498b3986-6101-47c6-a3c4-c6bd5d30fd16.jsonl` (line numbers):
+- 8 October, Stephan's Quintet: 16355, 16365, 16728, 17277, 17282, 17688, 17691, 17923, 18401, 18434, 18915, 18918, 18937, 19061, 19076, 19109
+- 26 October, the clock face: 59345, 59357, 59360, 59390, 59400, 59412, and 59961 for the 0.19′
+- 9 November, the profile: 80878, 80895, 81031
+- Sky and targets: 68101, 68114 (31 Oct); 18555, 18570 (8 Oct); 37251, 37262 (20 Oct)
+
+To check a quote: read that line of the JSONL, parse it, and print `message.content[].text`.
 
 ## Claims
 
