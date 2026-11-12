@@ -72,15 +72,14 @@ sepia and hue-rotate clip a bright galaxy core to yellow.
 
 ## The AI section (`#ai`)
 
-Real messages from field nights, where an AI ran the app and the owner only turned knobs. Rules: word for word,
+Real messages from field nights on the 11-inch SCT at 2,800 mm (the Stephan's Quintet night and 26 October), where an AI ran the app. No test targets (M27 was a test). Rules: word for word,
 "…" marks a cut, [brackets] replace equipment brand names, imaging only (no bug-fix talk), and no site name, PC
 names, IPs, people or issue ids. Times are local (EDT until 1 November, EST after).
 
 Sources, all in the alan-astro session transcript `498b3986-6101-47c6-a3c4-c6bd5d30fd16.jsonl` (line numbers):
 - 8 October, Stephan's Quintet: 16355, 16409, 16543, 16728, 17277, 17282, 17688, 17691, 17923, 18401, 18434, 18915, 18918, 18937, 19061, 19076, 19109
 - 26 October, the clock face: 59345, 59357, 59360, 59390, 59400, 59412, and 59961 for the 0.19′
-- 9 November, the profile: 80878, 80895, 81031
-- Sky and targets: 68101, 68114 (31 Oct); 18555, 18570, 18637 (8 Oct); 37251, 37262 (20 Oct)
+- Sky and targets, 8 October: 18555, 18570, 18637
 
 To check a quote: read that line of the JSONL, parse it, and print `message.content[].text`.
 

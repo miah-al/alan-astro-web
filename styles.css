@@ -454,7 +454,7 @@ a.badge[href]:hover { border-color: rgb(var(--fg-200)); transform: translateY(-2
 .chat > .msg.ai { margin-left: 44px; }
 .msg b { color: rgb(var(--fg-50)); font-weight: 650; }
 .msg.you b { color: inherit; }
-.ai-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 56px; align-items: start; }
+.ai-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 56px; align-items: start; }
 .ai-card h3 { margin: 8px 0 20px; }
 .ai-card .msg { max-width: 92%; font-size: 14px; }
 .ai-outcome { margin: 18px 0 0 !important; padding-top: 16px; border-top: 1px solid rgb(var(--base-750)); }
